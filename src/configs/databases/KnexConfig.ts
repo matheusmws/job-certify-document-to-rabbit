@@ -4,11 +4,11 @@ import knex from 'knex'
 const db = knex({
   client: "mysql",
   connection:{
-    host: "localhost",
+    host: 'localhost',
     port: 3306,
-    user: "root",
-    password: "",
-    database: "certifies"
+    user: 'root',
+    password: 'admin',
+    database: 'clients'
   }
 })
 

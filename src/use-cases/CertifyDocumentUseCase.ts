@@ -1,5 +1,5 @@
 export async function CertifyDocumentUseCase(file: Buffer): Promise<void> {
-  await randomDelay(2000, 15000)
+  await randomDelay(500, 5000)
   await randomException(5)
 }
 
