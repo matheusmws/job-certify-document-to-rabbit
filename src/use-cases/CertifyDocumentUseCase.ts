@@ -11,7 +11,7 @@ async function randomDelay(min: number = 1, max: number = 5000): Promise<void> {
 
 async function randomException(percentError = 10) {
   if (Math.random() <= percentError / 100) {
-    throw new Error('Erro proposital')
+    throw new Error('Erro ao certificar documento')
   }else{
     return true
   }
