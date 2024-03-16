@@ -1,6 +1,8 @@
-import knex from 'knex'
-import { randomUUID } from 'crypto'
-import 'dotenv/config'
+import knex from 'knex';
+import { randomUUID } from 'crypto';
+import 'dotenv/config';
+
+import { CertifyDocumentsTablesEnum } from "../src/enums/CertifyDocumentsEnums";
 
 const db = knex({
   client: 'mysql',
@@ -15,7 +17,7 @@ const db = knex({
 
 const generateData = async (maxGen = 100) => {
   for(let i = 0; i < maxGen; i++) {
-    await db('certify_documents').insert({
+    await db(CertifyDocumentsTablesEnum.CERTIFIY_DOCUMENTS).insert({
       id: randomUUID(),
       user_id: randomUUID(),
       file: Buffer.from(randomUUID()).toString('base64'),
